@@ -9,6 +9,11 @@
 </head>
 <body>
     <div class="quiz-container">
+        <br />
+        <div id="start-para">
+            <h2>Quiz</h2>
+            <p>You have 2 minutes to answer all of the questions. Good luck!</p>
+        </div> <!-- closes the start-para begins startGame function-->
         <div id="question-container" class="hide">
             <h2 id="countdown"></h2>
             <div id="question">Question</div>
@@ -18,17 +23,21 @@
                 <button class="btn">Answer 3</button>
                 <button class="btn">Answer 4</button>
             </div>
-        </div>
+        </div> <!-- closes question container-->
         <div class="controls">
             <button id="start-btn" class="start-btn btn">Start</button>
-            <br />
-            <div id="start-para">
-                <h2>Welcome to this Quiz</h2>
-                You have 2 minutes to answer all of the questions. Good luck!
-            </div>
-        <button id="next-btn" class="next-btn btn hide">Next</button>
+
+            <button id="next-btn" class="next-btn btn hide">Next</button>
         </div>
-    </div>
+        <div id="end-screen" class="hide">
+            <h2>Finished!</h2>
+            <p>Your final score is <span id="final-score"></span>.</p>
+            <p>
+                Enter name: <input type="text" id="userName" />
+               <button id="submit" class="btn">Submit</button>
+            </p>
+        </div><!-- closes end game screen -->
+    </div> <!-- closes quiz container wrapper-->
     <script src ="./assets/javascript/script.js"></script>
 </body>
 </html>
