@@ -87,24 +87,38 @@ function setNextQuestion() {
 
 function showQuestion(question){
     questionEl.innerText = question.question
-    question.answers.forEach(answer => {
-        let button = document.createElement('button')
-        button.innerText= answer.text
-        button.classList.add('btn')
-        if (answer.correct) {
-            button.dataset.correct= answer.correct
-        }
-        // else {
-        //     timeLeft = timeLeft-10
-        // }
-        button.addEventListener('click', selectAnswer)
-        answerButtonsElement.appendChild(button)
-    }
-        )
+        let score = 0
+        for(var i = 0; i < questions.length; i++) {
+            // Display current question to user and ask OK/Cancel
+            let button = document.createElement('button');
+            button.innerText = a.text;
+            console.log(a.text)
+            button.classList.add('btn');
+            var answer = createElement(questions[i].question);
+          
+            // Compare answers
+            if (answer.correct) {
+                button.dataset.correct= answer.correct
+                // Increase score
+              score++;
+              // Alert the user
+              alert('Correct!');
+            } 
+              button.addEventListener('click', selectAnswer)
+              answerButtonsEl.appendChild(button)
+            
+            }
+          }
+
+//reset the page for new questions
+function resetState() {
+    nextButton.classList.add("hide")
 }
 
 function selectAnswer(event) {
-
+    let selectedButton = event.target
+    let correct = selectedButton.dataset.correct
+    setStatusClass(document)
 }
 
 function countdown() {
@@ -116,21 +130,35 @@ function countdown() {
       //
       // YOUR CODE HERE
       if (timeLeft > 1){
-        timerEl.textContent = timeLeft + "seconds remaining"
+        timerEl.textContent = timeLeft + " " + "seconds remaining"
         timeLeft--
       }
       else if (timeLeft === 1) {
-        timerEl.textContent = timeLeft + "second remaining"
+        timerEl.textContent = timeLeft + " " + "second remaining"
         timeLeft--
       }
       else {
         timerEl.textContent = ""
         clearInterval(timeInterval)
-        displayMessage()
+        endQuiz()
       } 
     }
     , 1000);
   }
+
+ function endQuiz(){
+    //show end screen
+    let endScreenEl = document.getElementById("end-screen");
+    endScreenEl.classList.remove("hide");
+
+    //show user final score
+    // let finalScoreEl = document.getElementById("final-score");
+    // finalScoreEl.textContent = timeLeft + score;
+
+    //remove questions
+    questionEl.setAttribute("class", "hide")
+
+ }
 
 
 
