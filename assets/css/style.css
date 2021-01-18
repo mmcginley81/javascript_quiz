@@ -20,7 +20,7 @@ body{
     background-color: white;
     border-radius: 4px;
     padding: 10px;
-    /*box-shadow: 0 0 10px 2px;*/
+    box-shadow: 0 0 10px 2px;
 }
 
 .btn-grid{
@@ -46,6 +46,10 @@ body{
     border: 2px solid;
     font-weight: bold;
     cursor: pointer;
+}
+
+.btn:focus {
+    background-color: gold;
 }
 
 .btn.correct {

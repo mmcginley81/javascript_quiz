@@ -195,6 +195,7 @@ function saveScore() {
 
 }
 
+// Show the user's score list
 function showScoreList() {
 
   var list = document.createElement('li');
