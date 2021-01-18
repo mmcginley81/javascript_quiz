@@ -19,7 +19,7 @@ let userScore = document.getElementById('saveScore');
 let shuffledQuestions, currentQuestionIndex;
 
 let score = 0
-let timeLeft = 50;
+let timeLeft = 60;
 
 
 
