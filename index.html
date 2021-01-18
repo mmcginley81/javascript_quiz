@@ -18,10 +18,10 @@
             <h2 id="countdown"></h2>
             <div id="question">Question</div>
             <div id="answer-buttons" class="btn-grid">
-                <button class="btn">Answer 1</button>
-                <button class="btn">Answer 2</button>
-                <button class="btn">Answer 3</button>
-                <button class="btn">Answer 4</button>
+                <button class="btn choice">Answer 1</button>
+                <button class="btn choice">Answer 2</button>
+                <button class="btn choice">Answer 3</button>
+                <button class="btn choice">Answer 4</button>
             </div>
         </div> <!-- closes question container-->
         <div class="controls">
@@ -34,7 +34,13 @@
             <p>Your final score is <span id="final-score"></span>.</p>
             <p>
                 Enter name: <input type="text" id="userName" />
-               <button id="submit" class="btn">Submit</button>
+               <button id="saveScore" class="btn save-username">Save</button>
+            </p>
+            <p>
+                <h2>Scores</h2>
+                <ul id="score-area">
+
+                </ul>
             </p>
         </div><!-- closes end game screen -->
     </div> <!-- closes quiz container wrapper-->
