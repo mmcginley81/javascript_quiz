@@ -125,7 +125,7 @@ function setAnswerClass(element, correct) {
         
     }else {
         element.classList.add(".incorrect");
-        timeLeft = timeLeft - 1
+        timeLeft = timeLeft - 2
     }
 }
 
